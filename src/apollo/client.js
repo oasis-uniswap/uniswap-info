@@ -4,7 +4,7 @@ import { HttpLink } from 'apollo-link-http'
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: '/subgraphs/name/oeth-uniswap/uniswap',
+    uri: 'https://thegraph.pasco-tech.com/subgraphs/name/oeth-uniswap/uniswap',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -12,7 +12,7 @@ export const client = new ApolloClient({
 
 export const healthClient = new ApolloClient({
   link: new HttpLink({
-    uri: '/index-node/graphql',
+    uri: 'https://graphnode.pasco-tech.com/graphql',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -36,7 +36,7 @@ export const stakingClient = new ApolloClient({
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: '/subgraphs/name/oeth/ethereum-blocks',
+    uri: 'https://thegraph.pasco-tech.com/subgraphs/name/oeth/ethereum-blocks',
   }),
   cache: new InMemoryCache(),
 })
